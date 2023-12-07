@@ -1,0 +1,245 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  min-height: 500px;
+}
+
+header {
+  background-color: rgb(46, 139, 215);
+  padding: 8px 2px;
+  text-align: center;
+  color: white;
+}
+
+header h2 {
+  margin: 1px;
+}
+
+header p {
+  margin: 0px;
+  padding: 5px 30px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(244, 244, 244);
+  height: 80px;
+  align-items: center;
+  color: black;
+  box-shadow: 0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 56px rgba(17, 17, 26, 0.1), 0px 24px 80px rgba(17, 17, 26, 0.1);
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 40%;
+}
+
+header nav ul li a {
+  float: left;
+  display: block;
+  color: rgb(24, 85, 170);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #5e50a1;
+}
+
+.links a {
+  width: min-content;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.links {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
+  padding: 0;
+}
+
+.links a:hover,
+.links .activePage {
+  text-decoration: underline;
+}
+
+main {
+  margin: 50px 50px 200px 50px;
+  padding: 30px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.operationCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.luasBD,
+.kelilingBD {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3498db;
+  /* padding: 0px 100px; */
+  width: 100%;
+}
+
+.luasBD h2,
+.kelilingBD h2 {
+  margin: 0px;
+  padding: 15px 41%;
+  background-color: #2980b9;
+  color: white;
+  text-align: center;
+}
+
+.luasBD h3,
+.kelilingBD h3 {
+  border-top: 1px solid #3498db;
+  padding: 10px 40%;
+  text-align: center;
+}
+
+.luasBD h4,
+.kelilingBD h4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+input {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  width: 450px;
+}
+
+input[type="submit"] {
+  background-color: #2980b9;
+  color: white;
+  width: 100px;
+  margin: 10px auto;
+  border: 1px solid#2980b9;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #2980b9;
+  width: 100px;
+  margin: 10px auto;
+  border: 1px solid#2980b9;
+}
+
+input[type="reset"] {
+  background-color: #f0ad4e;
+  color: white;
+  float: right;
+  width: 100px;
+  margin: 20px;
+  border: 1px solid #f0ad4e;
+}
+
+input[type="reset"]:hover {
+  border-color: #f0ad4e;
+  color: #f0ad4e;
+  background-color: white;
+}
+
+#hasilLuas,
+#hasilKeliling {
+  margin: 0px 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(46, 139, 215);
+  box-shadow: 0px 4px 16px rgba(17, 17, 26, 0.1), 0px 8px 24px rgba(17, 17, 26, 0.1), 0px 16px 56px rgba(17, 17, 26, 0.1);
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .linksHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links {
+    grid-auto-flow: row;
+    row-gap: 15px;
+    justify-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .operationCard {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .luasBD h2,
+  .kelilingBD h2 {
+    padding: 15px 36%;
+  }
+
+  .luasBD h3,
+  .kelilingBD h3 {
+    border-top: 1px solid #3498db;
+    padding: 10px 30%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    margin: 15px auto;
+  }
+
+  input[type="submit"]:hover {
+    margin: 15px auto;
+  }
+
+  input[type="reset"] {
+    margin: 20px;
+  }
+
+  #hasilLuas,
+  #hasilKeliling {
+    margin: 0px 12px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .menu {
+    display: block !important;
+  }
+}
